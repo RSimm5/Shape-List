@@ -1,0 +1,42 @@
+void push_back(int *s) {
+    Node *temp = new Node;
+    temp->value = s;
+    temp->next = nullptr;
+
+    if(listFront == nullptr) {
+        listFront = temp;
+        listSize++;
+        return;
+    }
+
+    Node *curr = listFront;
+
+    while(curr != nullptr && curr->next != nullptr) {
+        curr = curr->next;
+    }
+
+    curr->next = temp;
+    listSize++;
+}
+
+
+void push_back(Shape *s) {
+            ShapeNode *temp = new ShapeNode;
+            temp->value = s;
+            temp->next = nullptr;
+
+            if(listFront == nullptr) {
+                listFront = temp;
+                listSize++;
+                return;
+            }
+
+            ShapeNode *curr = listFront;
+
+            while(curr != nullptr && curr->next != nullptr) {
+                curr = curr->next;
+            }
+
+            curr->next = temp;
+            listSize++;
+        }
